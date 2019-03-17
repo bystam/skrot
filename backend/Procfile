@@ -1,1 +1,1 @@
-web: java -Ddw.server.connector.port=$PORT $JAVA_OPTS -jar build/libs/skrot-backend-1.0-SNAPSHOT.jar server config/prod.yaml
+web: java "-Ddw.server.applicationConnectors[0].port=$PORT" "-Ddw.server.adminConnectors[0].port=$PORT" $JAVA_OPTS -jar build/libs/skrot-backend-1.0-SNAPSHOT.jar server config/prod.yaml
