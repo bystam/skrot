@@ -20,6 +20,11 @@ dependencies {
     compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
 }
 
+jar {
+    manifest { attributes 'Main-Class': 'io.skrot.MainKt' }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
