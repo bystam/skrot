@@ -1,4 +1,4 @@
-name: Skrot Backend Local
+name: Skrot Backend Production
 
 server:
   type: simple
@@ -6,4 +6,4 @@ server:
   adminContextPath: /admin
   connector:
     type: http
-    port: 8080
+    port: 80
